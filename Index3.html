@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }</style>
+</head>
+<body id="loadbody">
+<h1>counter:<span id="counter">0</span></h1>
+<img  id="increment" src="logo.jfif" alt="logo">
+<script>
+let count=0;
+const CounterDisplay=document.getElementById("counter");
+const img=document.getElementById("increment");
+ img.onmouseover= function() {
+            count++;
+            CounterDisplay.textContent = count;
+            if(count==5){
+            document.getElementById('loadbody').style.backgroundColor="red";
+        }
+        };
+</script>
+</body>
+</html>
